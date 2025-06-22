@@ -3,10 +3,6 @@ Waze Churn Prediction Project
 ---
 -----
 
-Predicting user churn based on app activity and driving behavior.
-
----
-
 Objective
 ----
 
