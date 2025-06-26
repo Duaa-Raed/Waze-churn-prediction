@@ -153,37 +153,4 @@ Churned F1: 0.41
 - Consider retraining monthly to capture seasonal patterns.
 
 
-## Dashboard Layout (Power BI Proposal)
-
----
-
-*Page 1*: Executive Summary + KPIs
-
-Text card: Goal & summary
-
-KPIs:
-
-Total Users
-
-Churn Rate
-
-Retention Rate
-
-Avg. Sessions / Drives / Activity Days / Distance
-
-*Page 2*: Churn Behavior Analysis
-
-Pie chart: Churn vs Retained
-
-Box plots: sessions, drives, total_sessions, driven_km_drives by label
-
-Confusion Matrix
-
-Feature Importance bar chart
-
-*Page 3* (Optional): Time-based or Device-based Insights
-
-Avg. sessions per device
-
-Activity by onboarding day
 
