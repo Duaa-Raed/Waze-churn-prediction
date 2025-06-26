@@ -37,7 +37,7 @@ Final Features after feature engineering: 20 columns
 Target Variable: label (Retained / Churned)
 
 Churn Rate: 17.7%
-د
+
 
 ## Data Cleaning & Feature Engineering
 ----
