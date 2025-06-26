@@ -128,9 +128,6 @@ Activity Days
 
 KM per Drive
 
-Include xgb.plot_importance() bar chart on Page 2 of Power BI Dashboard.
-
-
 ## Threshold Tuning Details
 -------
 
