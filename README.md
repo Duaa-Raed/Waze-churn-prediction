@@ -76,6 +76,10 @@ Median sessions: Churned (59), Retained (56)
 
 ![User Status Distribution (Churned vs Retained)](image/User_Status_Distribution_(Churned_vs._Retained).png)
 
+![Feature Correlation Matrix](image/Feature_Correlation_Matrix.png)
+
+
+
 ## Dataset Summary (Before Modeling)
 -----
 
