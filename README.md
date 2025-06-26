@@ -15,14 +15,14 @@ Waze Churn Prediction Project
 - [Threshold Tuning Details](#Threshold-Tuning-Details)
 
 
-#Objective
+##Objective
 ---
 
 
 The goal of this project is to predict which users are likely to churn (i.e., stop using the Waze app) based on their behavior and usage patterns. The key business objective is to maximize recall for churned users to allow for early intervention.
 
 
-#Dataset Overview
+##Dataset Overview
 ---
 
 Initial Users: 14,999
@@ -38,7 +38,7 @@ Target Variable: label (Retained / Churned)
 Churn Rate: 17.7%
 د
 
-#Data Cleaning & Feature Engineering
+##Data Cleaning & Feature Engineering
 ---
 
 Removed 700 users with missing target values.
@@ -62,7 +62,7 @@ percent_of_drives_to_favorite
 professional_driver
 
 
-#Exploratory Data Analysis (EDA)
+##Exploratory Data Analysis (EDA)
 ---
 
 Key Insights:
@@ -75,7 +75,7 @@ Median sessions: Churned (59), Retained (56)
 
 ![User Status Distribution (Churned vs Retained)](image/User_Status_Distribution_(Churned_vs._Retained).png)
 
-#Dataset Summary (Before Modeling)
+##Dataset Summary (Before Modeling)
 ---
 
 Total users: 14,299
@@ -83,7 +83,7 @@ Total users: 14,299
 Columns: 20 (after feature engineering)
 
 
-#Modeling
+##Modeling
 ---
 
 | Model                     | Accuracy | Precision | Recall | F1 Score | Notes                          |
@@ -93,7 +93,7 @@ Columns: 20 (after feature engineering)
 |  XGBoost (Threshold=0.158) | 0.75     | 0.35      | 0.50   | 0.41     | Final selected model           |
 
 
-#Final Test Set Results (XGBoost with threshold tuning)
+##Final Test Set Results (XGBoost with threshold tuning)
 ----
 
 | Metric     | Value |
@@ -103,7 +103,7 @@ Columns: 20 (after feature engineering)
 | F1 Score   | 0.41  |
 | Accuracy   | 0.75  |
 
-Confusion Matrix
+**Confusion Matrix**
 
 ![Confusion Matrix Random Forest Model on Validation Data](image/Confusion_Matrix_-_Random_Forest_Model_on_Validation_Data.png)
 
@@ -111,7 +111,7 @@ Confusion Matrix
 
 
 
-#Feature Importance (Top Predictors)
+##Feature Importance (Top Predictors)
 ---
 
 Drives
@@ -125,7 +125,7 @@ KM per Drive
 Include xgb.plot_importance() bar chart on Page 2 of Power BI Dashboard.
 
 
-#Threshold Tuning Details
+##Threshold Tuning Details
 ---
 
 Implemented custom function to evaluate recall at multiple thresholds.
@@ -140,7 +140,7 @@ Churned Recall: 0.50
 
 Churned F1: 0.41
 
-#Next Steps
+##Next Steps
 --
 
 - Integrate the model into a user retention alert system.
@@ -150,7 +150,7 @@ Churned F1: 0.41
 - Consider retraining monthly to capture seasonal patterns.
 
 
-#Dashboard Layout (Power BI Proposal)
+##Dashboard Layout (Power BI Proposal)
 ---
 
 *Page 1*: Executive Summary + KPIs
