@@ -75,9 +75,9 @@ Modeling
 
 | Model                     | Accuracy | Precision | Recall | F1 Score | Notes                          |
 |---------------------------|----------|-----------|--------|----------|--------------------------------|
-| ✅ Random Forest           | 0.82     | 0.47      | 0.13   | 0.21     | Not selected due to low recall |
-| 📉 XGBoost (Base)         | 0.80     | 0.36      | 0.14   | 0.21     |                                |
-| ⚠️ XGBoost (Threshold=0.158) | 0.75     | 0.35      | 0.50   | 0.41     | Final selected model           |
+|  Random Forest           | 0.82     | 0.47      | 0.13   | 0.21     | Not selected due to low recall |
+|  XGBoost (Base)         | 0.80     | 0.36      | 0.14   | 0.21     |                                |
+|  XGBoost (Threshold=0.158) | 0.75     | 0.35      | 0.50   | 0.41     | Final selected model           |
 
 
 Final Test Set Results (XGBoost with threshold tuning)
