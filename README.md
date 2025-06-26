@@ -2,15 +2,24 @@
 Waze Churn Prediction Project
 ---
 ----
+**Table of Contents**
+
+- [Objective](#Objective)
+- [Dataset Overview](#Dataset Overview)
+- [Classify Requests by Value](#classify-requests-by-value)
+- [Monthly Sales Change Analysis](#monthly-sales-change-analysis)
+- [Best-Selling Product Rankings by Country](#best-selling-product-rankings-by-country)
 
 
-Objective
+
+#Objective
 ---
+
 
 The goal of this project is to predict which users are likely to churn (i.e., stop using the Waze app) based on their behavior and usage patterns. The key business objective is to maximize recall for churned users to allow for early intervention.
 
 
-Dataset Overview
+#Dataset Overview
 ---
 
 Initial Users: 14,999
@@ -131,11 +140,11 @@ Churned F1: 0.41
 Next Steps
 --
 
--Integrate the model into a user retention alert system.
+- Integrate the model into a user retention alert system.
 
--Track churn prediction accuracy over time.
+- Track churn prediction accuracy over time.
 
--Consider retraining monthly to capture seasonal patterns.
+- Consider retraining monthly to capture seasonal patterns.
 
 
 Dashboard Layout (Power BI Proposal)
