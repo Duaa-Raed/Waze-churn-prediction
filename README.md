@@ -61,6 +61,7 @@ Churned users have slightly more sessions on average, but lower consistency.
 
 Median sessions: Churned (59), Retained (56)
 
+![User Status Distribution (Churned vs Retained)](image/User_Status_Distribution_(Churned_vs._Retained).png)
 
 Dataset Summary (Before Modeling)
 ---
@@ -92,14 +93,11 @@ Final Test Set Results (XGBoost with threshold tuning)
 
 Confusion Matrix
 
+![Confusion Matrix Random Forest Model on Validation Data](image/Confusion_Matrix_-_Random_Forest_Model_on_Validation_Data.png)
 
-|                    | Predicted Churned | Predicted Retained |
-|--------------------|-------------------|--------------------|
-| **Actual Churned** | 254               | 253                |
-| **Actual Retained**| 471               | 1882               |
+![Confusion Matrix XGBoost Model on Test Data](image/Confusion_Matrix_-_XGBoost_Model_on_Test_Data.png)
 
 
-Visual Confusion Matrix plot is recommended on Page 2 of Power BI Dashboard.
 
 Feature Importance (Top Predictors)
 ---
