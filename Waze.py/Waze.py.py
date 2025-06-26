@@ -27,13 +27,8 @@ from scipy import stats
 # ==================================================================================
 
 # Load the dataset
-# Note: Please change the path to the correct path on your machine
-try:
-    waze = pd.read_csv("C:/Users/duaar/OneDrive/Desktop/Waze/waze_dataset.csv")
-except FileNotFoundError:
-    print("Error: File not found. Please check the specified path.")
-    # You can place an alternative path here or terminate the program
-    # exit()
+
+waze = pd.read_csv("waze_dataset.csv")
 
 # Display a sample of the data
 print("### Data Sample (first 10 rows):")
@@ -134,7 +129,7 @@ print("# =======================================================================
 plt.figure(figsize=(8, 6))
 sns.countplot(x='label', data=df)
 plt.title('User Status Distribution (Churned vs. Retained)')
-plt.savefig(r'C:/Users/duaar/OneDrive/Desktop/image/User_Status_Distribution_(Churned_vs._Retained).png')
+plt.savefig(r'User_Status_Distribution_(Churned_vs._Retained).png')
 plt.show()
 print("### Status Distribution Percentage:")
 print(df['label'].value_counts(normalize=True) * 100)
@@ -144,7 +139,7 @@ plt.figure(figsize=(15, 12))
 corr = df_model.corr()
 sns.heatmap(corr, annot=True, fmt='.2f', cmap='coolwarm')
 plt.title('Feature Correlation Matrix')
-plt.savefig(r'C:/Users/duaar/OneDrive/Desktop/image/Feature_Correlation_Matrix.png')
+plt.savefig(r'Feature_Correlation_Matrix.png')
 plt.show()
 
 # --- 4.3. Median Analysis by User Status ---
@@ -244,7 +239,7 @@ cm_rf = confusion_matrix(y_val, rf_val_preds, labels=rf_cv.classes_)
 disp_rf = ConfusionMatrixDisplay(confusion_matrix=cm_rf, display_labels=['Retained', 'Churned'])
 disp_rf.plot(cmap='Blues')
 plt.title('Confusion Matrix - Random Forest Model on Validation Data')
-plt.savefig(r'C:/Users/duaar/OneDrive/Desktop/image/Confusion_Matrix_-_Random_Forest_Model_on_Validation_Data.png')
+plt.savefig(r'Confusion_Matrix_-_Random_Forest_Model_on_Validation_Data.png')
 plt.show()
 
 
@@ -289,7 +284,7 @@ cm = confusion_matrix(y_test, xgb_test_preds, labels=xgb_cv.classes_)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Retained', 'Churned'])
 disp.plot(cmap='Blues')
 plt.title('Confusion Matrix - XGBoost Model on Test Data')
-plt.savefig(r'C:/Users/duaar/OneDrive/Desktop/image/Confusion_Matrix_-_XGBoost_Model_on_Test_Data.png')
+plt.savefig(r'Confusion_Matrix_-_XGBoost_Model_on_Test_Data.png')
 plt.show()
 
 print("\n### Detailed Classification Report for XGBoost Model:")
@@ -299,7 +294,7 @@ print(classification_report(y_test, xgb_test_preds, target_names=['Retained', 'C
 plt.figure(figsize=(10, 8))
 plot_importance(xgb_cv.best_estimator_, max_num_features=10)
 plt.title('Top 10 Features in XGBoost Model')
-plt.savefig(r'C:/Users/duaar/OneDrive/Desktop/image/Top_10_Features_in_XGBoost_Model.png')
+plt.savefig(r'Top_10_Features_in_XGBoost_Model.png')
 plt.show()
 
 
@@ -346,38 +341,6 @@ print(final_results)
 print("\n### Classification report after threshold tuning:")
 print(classification_report(y_test, new_preds, target_names=['Retained', 'Churned']))
 
-
-import os
-
-
-# Define the list of original and new columns
-original_columns = [
-    'ID', 'label', 'sessions', 'drives', 'total_sessions', 'n_days_after_onboarding',
-    'total_navigations_fav1', 'total_navigations_fav2', 'driven_km_drives',
-    'duration_minutes_drives', 'activity_days', 'driving_days', 'device'
-]
-new_columns = [
-    'km_per_drive', 'km_per_driving_day', 'drives_per_driving_day', 'percent_sessions_in_last_month',
-    'professional_driver', 'total_sessions_per_day', 'km_per_hour', 'percent_of_drives_to_favorite', 'device2'
-]
-all_columns = original_columns + new_columns
-
-# Ensure all columns exist in the DataFrame (fill missing with NaN if needed)
-for col in all_columns:
-    if col not in df.columns:
-        df[col] = np.nan
-
-# Reorder DataFrame columns
-df_export = df[all_columns]
-
-# Save as CSV
-csv_output_path = r'C:\Users\duaar\OneDrive\Desktop\Waze\WAZE clean.csv'
-df_export.to_csv(csv_output_path, index=False)
-
-# Save as Python file
-py_output_path = r'C:\Users\duaar\OneDrive\Desktop\Waze\WAZE_clean.py'
-with open(py_output_path, 'w', encoding='utf-8') as f:
-    f.write(df_export.to_string(index=False))
 
 
    
