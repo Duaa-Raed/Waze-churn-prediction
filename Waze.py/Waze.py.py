@@ -1,3 +1,7 @@
+# Copyright (c) 2025 Duaa Raed
+# Educational use only – not for redistribution without permission.
+
+
 # ==================================================================================
 # # 1. Import Libraries and Tools
 # ==================================================================================
